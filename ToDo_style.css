@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* アプリ全体 */
+.container {
+  background: white;
+  width: 350px;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* タイトル */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 入力エリア */
+.input-area {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  background: #f0f0f0;
+}
+
+.input-area button {
+  padding: 10px 15px;
+  border: none;
+  background: #667eea;
+  color: white;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.input-area button:hover {
+  background: #5563c1;
+}
+
+/* リスト */
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* タスク */
+li {
+  list-style: none;
+  background: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: grab;
+  transition: 0.2s;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+/* 完了 */
+.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* ボタン */
+li button {
+  background: #ff5c5c;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ドラッグ */
+li.dragging {
+  opacity: 0.5;
+}
+button:active {
+  transform: scale(0.95);
+}
+button {
+  min-height: 44px; /* 指で押しやすい */
+}
+
+input {
+  min-height: 44px;
+}
+ul {
+  max-height: 300px;
+  overflow-y: auto;
+}
+/* =========================
+   スマホ対応
+========================= */
+@media (max-width: 480px) {
+
+  body {
+    align-items: flex-start;
+    padding: 20px 10px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .input-area input {
+    font-size: 16px;
+  }
+
+  .input-area button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  li {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  li button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDoリスト</title>
+  <link rel="stylesheet" href="ToDo_style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="manifest" href="ToDo_manifest.json">
+<meta name="theme-color" content="#667eea">
+</head>
+<body>
+
+ <div class="container">
+  <h1>ToDo</h1>
+
+  <div class="input-area">
+    <input type="text" id="taskInput" placeholder="やることを入力">
+    <button onclick="addTask()">追加</button>
+  </div>
+
+  <ul id="taskList"></ul>
+</div>
+
+  <script src="ToDo_script.js"></script>
+</body>
+</html>
